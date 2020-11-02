@@ -24,7 +24,7 @@ const AddRouteForm = () => {
         port = start
       }
 
-      for (let i = 0; i < num; i++) {
+      for (let i = 0; i <= num; i++) {
         const call = `/api/v1/add/${rport}/${laddr}/${port}?udp=${udp}`
         console.log(call)
         rport++; port++
