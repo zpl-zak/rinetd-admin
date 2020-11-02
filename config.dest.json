@@ -1,4 +1,5 @@
 {
+    "port": 8080,
     "config-path": "/etc/rinetd.conf",
     "on-save-hook": "systemctl restart rinetd"
 }

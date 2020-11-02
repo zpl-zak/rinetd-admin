@@ -9,8 +9,8 @@ Simple REST API to manage routing rules and access policies for the [rinetd](htt
 
 ## How to set up
 1. Copy `config.dest.json` to `config.json`
-2. Edit `config.json` to specify the local rinetd.conf file location.
-3. `npm run start`
+2. Edit `config.json` to specify the local rinetd.conf file location, on save hook and webserver port.
+3. `node server.js`
 
 ## Things to do
 - Access policies, they are unsupported at the moment.
