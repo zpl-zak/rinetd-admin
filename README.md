@@ -31,7 +31,3 @@ Simple REST API to manage routing rules and access policies for the [rinetd](htt
 
 **rinetd-admin** offers no security on its own. It is recommended to run it behind firewall only accessible from the intended local network.
 It also works best with config fully managed by this service.
-
-## License
-
-Check [LICENSE.MD](LICENSE.MD)
