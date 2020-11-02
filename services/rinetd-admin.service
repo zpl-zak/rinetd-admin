@@ -1,0 +1,13 @@
+[Unit]
+Description=rinetd-admin
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/rinetd-admin
+ExecStart=/usr/bin/node /root/rinetd-admin/server.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

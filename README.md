@@ -27,6 +27,10 @@ Simple REST API to manage routing rules and access policies for the [rinetd](htt
 
 `api/v1/list` - Lists all the config entries
 
+## Dashboard
+
+You can also access a simple to use dashboard via browser that makes use of the API.
+
 ## Note
 
 **rinetd-admin** offers no security on its own. It is recommended to run it behind firewall only accessible from the intended local network.
