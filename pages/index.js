@@ -8,12 +8,28 @@ const AddRouteForm = () => {
     initialValues: {
       laddr: '10.20.40.2',
       rport: '80',
-      port: '8080'
+      port: '8080',
+      udp: false
     },
-    onSubmit: ({laddr, rport, port}) => {
-      const call = `/api/v1/add/${rport}/${laddr}/${port}`
-      console.log(call)
-      fetch(call).then(() => mutate(`/api/v1/list`))
+    onSubmit: ({laddr, rport, port, udp}) => {
+      if (port.length < 1) port = rport
+      const range = rport.split('-')
+      let num = 1;
+
+      if (range.length > 1) {
+        const start = parseInt(range[0])
+        const end = parseInt(range[1])
+        num = end - start
+        rport = start
+        port = start
+      }
+
+      for (let i = 0; i < num; i++) {
+        const call = `/api/v1/add/${rport}/${laddr}/${port}?udp=${udp}`
+        console.log(call)
+        rport++; port++
+        fetch(call).then(() => mutate(`/api/v1/list`))
+      }
     }
   })
   return (
@@ -31,6 +47,10 @@ const AddRouteForm = () => {
           <tr>
             <td><label htmlFor="port">Local Port: </label></td>
             <td><input name="port" type="text" value={formik.values.port} onChange={formik.handleChange}></input></td>
+          </tr>
+          <tr>
+            <td><label htmlFor="udp">Is UDP: </label></td>
+            <td><input name="udp" type="checkbox" value={formik.values.udp} onChange={formik.handleChange}></input></td>
           </tr>
           <tr>
             <td><input type="submit"></input></td>
