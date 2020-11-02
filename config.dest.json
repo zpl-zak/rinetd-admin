@@ -1,0 +1,4 @@
+{
+    "config-path": "/etc/rinetd.conf",
+    "on-save-hook": "systemctl restart rinetd"
+}

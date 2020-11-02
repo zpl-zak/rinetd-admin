@@ -1,15 +1,18 @@
 {
-  "name": "learn-starter",
+  "name": "rinetd-admin",
   "version": "0.1.0",
-  "private": true,
+  "author": "Dominik Madarász <zaklaus@madaraszd.net>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "formik": "^2.2.1",
+    "isomorphic-unfetch": "^3.1.0",
     "next": "^10.0.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "swr": "^0.3.8"
   }
 }
