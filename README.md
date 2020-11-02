@@ -1,6 +1,6 @@
 # rinetd-admin
 
-Simple REST API to manage routing rules and access policies for the [rinetd](https://github.com/samhocevar/rinetd) super server.
+Simple REST API to manage routing rules and access policies for the [rinetd](http://www.rinetd.com/) super server.
 
 ## Prerequsites
 - Local rinetd server instance
