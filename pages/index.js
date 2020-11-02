@@ -14,7 +14,7 @@ const AddRouteForm = () => {
     onSubmit: ({laddr, rport, port, udp}) => {
       if (port.length < 1) port = rport
       const range = rport.split('-')
-      let num = 1;
+      let num = 0;
 
       if (range.length > 1) {
         const start = parseInt(range[0])
