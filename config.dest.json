@@ -1,5 +1,5 @@
 {
     "port": 8080,
     "config-path": "/etc/rinetd.conf",
-    "on-save-hook": "systemctl restart rinetd"
+    "on-save-hook": "kill -1 $(cat /var/run/rinetd.pid)"
 }
